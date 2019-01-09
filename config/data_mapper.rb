@@ -1,5 +1,8 @@
 ENV['RACK_ENV'] ||= 'development'
 
-Datamapper.setup(:default, "postgres://localhost/makers_bnb_#{ENV['RACK_ENV']}")
+require './lib/user'
+require 'data_mapper'
 
-Datamapper.finalize
+DataMapper.setup(:default, "postgres://localhost/makers_bnb_#{ENV['RACK_ENV']}")
+
+DataMapper.finalize

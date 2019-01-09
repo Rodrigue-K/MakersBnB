@@ -1,13 +1,13 @@
-ENV['RACK_ENV'] = 'development'
-
 require 'pry'
-require 'sinata/base'
-require '.config/data_mapper'
+require 'sinatra/base'
+require './config/data_mapper'
 
 class MakersBnB < Sinatra::Base
   enable :sessions
   enable :method_override
 
+  ENV['RACK_ENV'] ||= 'development'
+  
   get '/' do
     erb :index
   end
