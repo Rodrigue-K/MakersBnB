@@ -1,7 +1,7 @@
 ENV['RACK_ENV'] = 'development'
 
 require 'pry'
-require 'sinata/base'
+require 'sinatra/base'
 require '.config/data_mapper'
 
 class MakersBnB < Sinatra::Base
