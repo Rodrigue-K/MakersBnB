@@ -5,6 +5,26 @@
 
 A web app that lets hosts offer up a list of spaces to rent and lets renters rent them out
 
+## Getting started
+
+1. Clone this repo `git clone git@github.com:Sindex42/MakersBnB.git`
+2. Change directory `cd MakersBnB`
+3. Run bundle to install dependencies `bundle install`
+
+### Setting up the databases
+
+1. Install postgresql `brew install postgres`
+2. Open up postgresql from the command line `psql`
+3. Create the development database `createdb makers_bnb_development;`
+4. Create the test database `createdb makers_bnb_test;`
+5. Set up the tables `db:auto_migrate`
+
+### Running tests
+
+1. Run rackup to start the server `rackup`
+2. Open up a browser and navigate to the following page [http://localhost:9292](http://localhost:9292)
+3. Run the tests with `rspec` in the project root folder
+
 ```
 As a host
 So that I can rent out a space
