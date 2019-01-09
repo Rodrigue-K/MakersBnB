@@ -1,23 +1,40 @@
 # MakersBnB
 
+## Makers Academy - 3 day Group Project
+
+A web app that lets hosts offer up a list of spaces to rent and lets renters rent them out
+
+
 ## User stories
 
 ```
+As a user 
+So that I can start renting out spaces
+I would like to be able to sign up
+
+As a user 
+So that I can continue renting spaces
+I would like to be able to sign in 
+
+As a user 
+So that I can continue using the website
+I would like to be able to stay signed in
+
 As a host
 So that I can rent out a space
 I would like to list a space
 
 As a host
 So that I can rent out all my spaces
-I would like to list more than one space
+I would like to list multiple spaces
 
 As a host
 So that I can track different spaces
-I would like to give each listing a name
+I would like to be able to name my space
 
 As a host
 So that I can encourage uptake of my space
-I would like to describe my space
+I would like to provide a short description of my space
 
 As a host
 So that I can charge customers 
@@ -25,11 +42,11 @@ I would like to list a price per night
 
 As a host 
 So my space can be rented as much as possible
-I would like to be able to offer a range of dates for when the space is available
+I would like to be able to offer a range of dates where the space is available
 
 As a renter
 So that I can have somewhere to sleep
-I would like to be able request to hire a space
+I would like to be able request to hire a space for one night
 
 As a host
 So that I can vet people 
@@ -43,11 +60,6 @@ As a host
 So that my space can be rented as long as possible
 I would like spaces to be available until booking is confirmed
 ```
-
-
-## Makers Academy - 3 day Group Project
-
-A web app that lets hosts offer up a list of spaces to rent and lets renters rent them out
 
 ## Getting started
 
