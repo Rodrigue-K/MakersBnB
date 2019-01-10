@@ -7,7 +7,6 @@ gem 'json', '~> 1.8', '>= 1.8.3'
 gem 'pry'
 gem 'rake'
 gem 'sinatra'
-gem 'travis'
 
 group :test do
   gem 'capybara'
