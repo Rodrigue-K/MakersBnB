@@ -1,4 +1,4 @@
-require 'list_space'
+require 'space'
 
 describe Space do
   let!(:space) { Space.create(name: "Makers", price: 435, description: "Nice") }

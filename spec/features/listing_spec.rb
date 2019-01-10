@@ -11,6 +11,15 @@ feature 'Listings' do
     expect(current_path).to eq '/'
   end
 
+  scenario 'A user can see details about a listed space' do
+    fill_in_bee_listing
+
+    expect(page).to have_content('Price')
+    expect(page).to have_content('Name')
+    expect(page).to have_content('Description')
+    expect(page).to have_content('Availability')
+  end
+
   scenario 'A user can see a submitted listing' do
     fill_in_bee_listing
 
