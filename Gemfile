@@ -8,7 +8,6 @@ gem 'pry'
 gem 'rake'
 gem "sinatra"
 
-
 group :test do
   gem 'capybara'
   gem 'database_cleaner'

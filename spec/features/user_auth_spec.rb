@@ -42,7 +42,9 @@ feature 'User Authentication' do
     scenario 'A signed in user can log out' do
       signin
       click_button 'Log out'
-      expect(page).to have_content "Sign Up Sign In"
+      click_link 'Profile'
+
+      expect(current_path).to eq '/signin'
     end
   end
 end
