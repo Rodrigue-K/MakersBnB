@@ -5,10 +5,25 @@
   <title></title>
 </head>
 <body>
-  Welcome, <%= @current_user.email %>
+  <h1>Welcome, <%= @current_user.email %></h1>
+
+    <h2>Add Listing</h2>
+      <form action="/" method="post">
+        Name: <input type="text" name="name"><br>
+        Price: <input type="number" name="price"><br>
+        Description: <input type="text" name="description"><br>
+
+        <input type="submit" value="Submit">
+      </form>
+
   <form action="/signin" method="post">
     <input type="hidden" name="_method" value="delete">
     <input type="submit" value="Log out">
   </form>
+
+  <form class="" action="/" method="get">
+    <input type="submit" value="Listings">
+  </form>
+
 </body>
 </html>
