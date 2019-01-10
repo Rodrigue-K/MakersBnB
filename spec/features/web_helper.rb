@@ -13,3 +13,9 @@ def signin
   fill_in :password, with: 'testpassword'
   click_button 'Sign In'
 end
+
+def fill_in_bee_listing
+  fill_in :name, with: 'Hive'
+  fill_in :price, with: 350
+  fill_in :description, with: 'Buzzing'
+end
