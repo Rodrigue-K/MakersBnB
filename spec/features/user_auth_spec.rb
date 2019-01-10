@@ -36,7 +36,7 @@ feature 'User Authentication' do
       fill_in :password, with: 'wrongpassword'
       click_button 'Sign In'
 
-      expect(current_path).to eq '/'
+      expect(current_path).to eq '/signin'
     end
 
     scenario 'A signed in user can log out' do
