@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <link rel="stylesheet" type="text/css" href="<%= url("/style/style.css") %>">
   <meta charset="utf-8">
   <title></title>
 </head>
-<body>
-  Welcome, <%= @current_user.email %>
-  <form action="/signin" method="post">
-    <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="Log out">
-  </form>
-</body>
+<center>
+  <body>
+    <%= erb(:title) %>
+    Welcome, <%= @current_user.email %>
+    <form action="/signin" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Log out">
+    </form>
+  </body>
+</center>
 </html>

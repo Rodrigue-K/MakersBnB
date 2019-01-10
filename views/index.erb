@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
+<head>
+  <link rel="stylesheet" type="text/css" href="<%= url("/style/style.css") %>">
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<center>
   <body>
-    <a href="/signup">Sign Up</a>
-    <a href="/signin">Sign In</a>
-    <br> 
-    <br>
-    <h1>Bee 'n' Bea(?)</h1>
-    <div>
-    <h2>Name</h2>
-    <br>
-    <h2>Description</h2>
-    <br>
-    <h2>Price</h2>
-    <br>
-    <h2>Availability</h2>
-    <br>
-  </body>
+    <%= erb(:title) %>
+    <%= erb(:button, :locals => { :object => "signup", :name => "Sign Up" }) %>
+    <%= erb(:button, :locals => { :object => "signin", :name => "Sign In" }) %>
+  </div>
+  <h2>Name</h2>
+  <br>
+  <h2>Description</h2>
+  <br>
+  <h2>Price</h2>
+  <br>
+  <h2>Availability</h2>
+  <br>
+</body>
+</center>
 </html>

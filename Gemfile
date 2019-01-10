@@ -6,7 +6,8 @@ gem 'dm-postgres-adapter'
 gem 'json', '~> 1.8', '>= 1.8.3'
 gem 'pry'
 gem 'rake'
-gem 'sinatra'
+gem "sinatra"
+
 
 group :test do
   gem 'capybara'
