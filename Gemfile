@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
+gem 'json', '~> 1.8', '>= 1.8.3'
 gem 'pry'
 gem 'rake'
 gem 'sinatra'

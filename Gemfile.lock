@@ -147,6 +147,7 @@ DEPENDENCIES
   data_mapper
   database_cleaner
   dm-postgres-adapter
+  json (~> 1.8, >= 1.8.3)
   pry
   rake
   rspec
@@ -156,4 +157,4 @@ DEPENDENCIES
   sinatra
 
 BUNDLED WITH
-   1.16.6
+   1.17.1
