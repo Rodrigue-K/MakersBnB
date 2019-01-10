@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
+<head>
+  <link rel="stylesheet" type="text/css" href="<%= url("/style/style.css") %>">
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<center>
+
   <body>
-    <form action="/signup" method="post">
-      <label for="email">Email:</label>
-      <input type="text" name="email">
-      <br>
-
-      <label for="password">Password:</label>
-      <input type="password" name="password">
-      <br><br>
-
-      <input type="submit" value="Sign Up">
-    </form>
+    <%= erb(:title) %>
+    <%= erb(:signforms, :locals => { :action => "/signup", :name => "Sign Up" }) %>
   </body>
+
+</center>
 </html>
