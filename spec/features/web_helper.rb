@@ -1,9 +1,5 @@
-def go_home
-  visit '/'
-end
-
 def signup
-  go_home
+  visit '/'
   click_on 'Sign Up'
   fill_in :email, with: 'test@test.com'
   fill_in :password, with: 'testpassword'
@@ -11,7 +7,7 @@ def signup
 end
 
 def signin
-  go_home
+  visit '/'
   click_on 'Sign In'
   fill_in :email, with: 'test@test.com'
   fill_in :password, with: 'testpassword'

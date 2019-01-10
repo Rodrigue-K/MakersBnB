@@ -26,15 +26,20 @@ class MakersBnB < Sinatra::Base
     erb :signin
   end
 
+  post '/signin' do
+    user = User.authenticate(params[:email], params[:password])
+
+    if user
+      session[:user_id] = user.id
+      redirect '/profile'
+    else
+      redirect '/'
+    end
+  end
+
   delete '/signin' do
     session.delete(:user_id)
     redirect '/'
-  end
-
-  post '/signin' do
-    user = User.create(email: params[:email], password: params[:password])
-    session[:user_id] = user.id
-    redirect '/profile'
   end
 
   get '/profile' do
