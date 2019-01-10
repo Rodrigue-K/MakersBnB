@@ -7,6 +7,7 @@ gem 'pry'
 gem 'rake'
 gem 'sinatra'
 gem 'travis'
+gem 'do_postgres', '~> 0.10.17'
 
 group :test do
   gem 'capybara'

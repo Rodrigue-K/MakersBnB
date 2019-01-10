@@ -1,8 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.5.2)
-      public_suffix (>= 2.0.2, < 4.0)
+    addressable (2.4.0)
     ansi (1.5.0)
     ast (2.4.0)
     backports (3.11.4)
@@ -18,7 +17,6 @@ GEM
       regexp_parser (~> 1.2)
       xpath (~> 3.2)
     coderay (1.1.2)
-    connection_pool (2.2.2)
     data_mapper (1.2.0)
       dm-aggregates (~> 1.2.0)
       dm-constraints (~> 1.2.0)
@@ -78,12 +76,12 @@ GEM
       faraday (>= 0.7.4, < 1.0)
     fastercsv (1.5.5)
     ffi (1.10.0)
-    gh (0.14.0)
-      addressable
+    gh (0.15.1)
+      addressable (~> 2.4.0)
       backports
       faraday (~> 0.8)
       multi_json (~> 1.0)
-      net-http-persistent (>= 2.7)
+      net-http-persistent (~> 2.9)
       net-http-pipeline
     highline (1.7.10)
     hirb (0.7.3)
@@ -98,8 +96,7 @@ GEM
     multi_json (1.13.1)
     multipart-post (2.0.0)
     mustermann (1.0.3)
-    net-http-persistent (3.0.0)
-      connection_pool (~> 2.2)
+    net-http-persistent (2.9.4)
     net-http-pipeline (1.0.1)
     nokogiri (1.10.0)
       mini_portile2 (~> 2.4.0)
@@ -110,7 +107,6 @@ GEM
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
-    public_suffix (3.0.3)
     pusher-client (0.6.2)
       json
       websocket (~> 1.0)
@@ -185,6 +181,7 @@ DEPENDENCIES
   data_mapper
   database_cleaner
   dm-postgres-adapter
+  do_postgres (~> 0.10.17)
   json (~> 1.8, >= 1.8.3)
   pry
   rake
