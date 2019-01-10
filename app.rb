@@ -41,7 +41,7 @@ class MakersBnB < Sinatra::Base
       session[:user_id] = user.id
       redirect '/profile'
     else
-      redirect '/'
+      redirect '/signin'
     end
   end
 
