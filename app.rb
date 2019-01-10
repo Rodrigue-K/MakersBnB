@@ -12,6 +12,14 @@ class MakersBnB < Sinatra::Base
     erb :index
   end
 
+  get '/profile' do
+    if signed_in?
+      erb :profile
+    else
+      redirect '/signin'
+    end
+  end
+
   get '/signup' do
     erb :signup
   end
@@ -42,8 +50,13 @@ class MakersBnB < Sinatra::Base
     redirect '/'
   end
 
-  get '/profile' do
-    @user = User.get(session[:user_id])
-    erb :profile
+  private
+
+  def signed_in?
+    !current_user.nil?
+  end
+
+  def current_user
+    @current_user ||= User.get(session[:user_id])
   end
 end
