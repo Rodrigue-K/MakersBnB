@@ -9,7 +9,18 @@ class MakersBnB < Sinatra::Base
   ENV['RACK_ENV'] ||= 'development'
 
   get '/' do
+    @spaces = Space.all
     erb :index
+  end
+
+  post '/' do
+    Space.create(
+      name: params[:name],
+      price: params[:price],
+      description: params[:description]
+    )
+
+    redirect '/'
   end
 
   get '/profile' do
