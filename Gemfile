@@ -9,7 +9,6 @@ gem 'rake'
 gem 'sinatra'
 gem 'travis'
 
-
 group :test do
   gem 'capybara'
   gem 'database_cleaner'

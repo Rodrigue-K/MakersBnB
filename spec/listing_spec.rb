@@ -1,9 +1,15 @@
-feature 'list spaces' do
-  scenario "user can see a listed space" do
-    visit "/"
-    expect(page).to have_content("Price")
-    expect(page).to have_content("Name")
-    expect(page).to have_content("Description")
-    expect(page).to have_content("Availability")
+require 'list_space'
+
+describe Space do
+  let!(:space) { Space.create(name: "Makers", price: 435, description: "Nice") }
+
+  it 'has a name' do
+    expect(space.name).to eq( 'Makers')
   end
+  it 'has a price' do
+    expect(space.price).to eq(435)
+  end
+  it 'has a description' do
+    expect(space.description).to eq('Nice')
+  end 
 end
