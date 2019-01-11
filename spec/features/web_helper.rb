@@ -3,7 +3,7 @@ def signup
   click_button 'Sign Up'
   fill_in :email, with: 'test@test.com'
   fill_in :password, with: 'testpassword'
-  click_button 'Sign Up'
+  click_button 'Submit'
 end
 
 def signin
@@ -11,7 +11,7 @@ def signin
   click_button 'Sign In'
   fill_in :email, with: 'test@test.com'
   fill_in :password, with: 'testpassword'
-  click_button 'Sign In'
+  click_button 'Submit'
 end
 
 def fill_in_bee_listing

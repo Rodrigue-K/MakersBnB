@@ -3,24 +3,25 @@
 <head>
   <link rel="stylesheet" type="text/css" href="<%= url("/style/style.css") %>">
   <meta charset="utf-8">
-  <title></title>
+  <title>Bee 'n' Bee: Homepage</title>
 </head>
 <center>
   <body>
-    <%= erb(:title) %>
-    <%= erb(:button, :locals => { :object => "signup", :name => "Sign Up" }) %>
-    <%= erb(:button, :locals => { :object => "signin", :name => "Sign In" }) %>
-    <a href="/profile">Profile</a>
-    <br><br>
-
-    <% @spaces.reverse.each do |space| %>
-      <b>Name: </b><%= space.name %><br>
-      <b>Description: </b><%= space.description %><br>
-      <b>Price: </b><%= space.price %><br>
-      <b>Available from: </b><%= space.available_from %><br>
-      <b>Available to: </b><%= space.available_to %><br>
-      <br><br>
-    <% end %>
-</body>
-</center>
-</html>
+    <nav>
+      <%= erb(:navbar)%>
+    </nav>
+    <header>
+      <%= erb(:title) %>
+    </header>
+    <section>
+      <% @spaces.reverse.each do |space| %>
+      <ul>
+        <li><%= erb(:indv_space, :locals => { :space => space }) %>
+          <hr>
+          <% end %>
+        </ul>
+      </section>
+      <%= erb(:footer)%>
+    </body>
+  </center>
+  </html>

@@ -5,7 +5,7 @@ feature 'User Authentication' do
       click_on 'Sign Up'
       fill_in :email, with: 'test@test.com'
       fill_in :password, with: 'testpassword'
-      click_button 'Sign Up'
+      click_button 'Submit'
 
       expect(page).to have_content 'Welcome, test@test.com'
     end
@@ -19,7 +19,7 @@ feature 'User Authentication' do
       click_on 'Sign In'
       fill_in :email, with: 'test@test.com'
       fill_in :password, with: 'testpassword'
-      click_button 'Sign In'
+      click_button 'Submit'
 
       expect(page).to have_content 'Welcome, test@test.com'
     end
@@ -42,7 +42,7 @@ feature 'User Authentication' do
     scenario 'A signed in user can log out' do
       signin
       click_button 'Log out'
-      click_link 'Profile'
+      click_button 'Profile'
 
       expect(current_path).to eq '/signin'
     end
