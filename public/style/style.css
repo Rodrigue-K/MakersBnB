@@ -281,6 +281,7 @@ li a {
 section {
   display: -webkit-flex;
   display: flex;
+  align: center
 }
 
 #indv_space {

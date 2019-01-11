@@ -13,15 +13,14 @@
     <header>
       <%= erb(:title) %>
     </header>
-    <section>
-      <ul>
-        <li>
-          <b>Name: </b><%= @space.name %><br>
-          <b>Description: </b><%= @space.description %><br>
-          <b>Price: </b><%= @space.price %><br>
-        <hr>
-      </ul>
-    </section>
+      <b>Name: </b><%= @space.name %><br>
+      <b>Description: </b><%= @space.description %><br>
+      <b>Price: </b><%= @space.price %><br>
+
+      <h2>Dates available</h2>
+
+      <h2>When are you buzzing in?</h2>
+    <hr>
       <%= erb(:footer)%>
     </body>
   </center>
