@@ -14,14 +14,14 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/' do
-    Space.create(
+    space = Space.create(
       name: params[:name],
       price: params[:price],
       description: params[:description],
       available_from: params[:available_from],
       available_to: params[:available_to]
     )
-    
+
     redirect '/'
   end
 
@@ -61,6 +61,11 @@ class MakersBnB < Sinatra::Base
   delete '/signin' do
     session.delete(:user_id)
     redirect '/'
+  end
+
+  get '/space/:id' do
+    @space = Space.get(params[:id])
+    erb :space
   end
 
   private

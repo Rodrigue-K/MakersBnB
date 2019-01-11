@@ -14,9 +14,11 @@ describe Space do
   it 'has a name' do
     expect(space.name).to eq('Makers')
   end
+
   it 'has a price' do
     expect(space.price).to eq(435)
   end
+
   it 'has a description' do
     expect(space.description).to eq('Nice')
   end
