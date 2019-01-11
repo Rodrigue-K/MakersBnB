@@ -3,7 +3,7 @@
 <head>
   <link rel="stylesheet" type="text/css" href="<%= url("/style/style.css") %>">
   <meta charset="utf-8">
-  <title>Bee 'n' Bee: Homepage</title>
+  <title>Bee 'n' Bee: Spaces</title>
 </head>
 <center>
   <body>
@@ -14,13 +14,12 @@
       <%= erb(:title) %>
     </header>
     <section>
-      <% @spaces.reverse.each do |space| %>
       <ul>
         <li>
-        <%= erb(:indv_space, :locals => { :space => space }) %>
-        <a href="/space/<%= space.id %>">Book</a>
+          <b>Name: </b><%= @space.name %><br>
+          <b>Description: </b><%= @space.description %><br>
+          <b>Price: </b><%= @space.price %><br>
         <hr>
-        <% end %>
       </ul>
     </section>
       <%= erb(:footer)%>
