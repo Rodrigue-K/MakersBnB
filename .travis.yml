@@ -1,19 +1,13 @@
 language: ruby
 
-
 services:
   - postgresql
 
 before_script:
   - psql -c 'create database "makers_bnb_test";' -U postgres || true
 
-
 script:
-  - RACK_ENV=test bundle exec rake --trace rubocop db:auto_migrate
-
-
-env:
-    - DATABASE=postgresql
+  - RACK_ENV=test bundle exec rake --trace db:auto_migrate
 
 notifications:
   email: false
