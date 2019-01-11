@@ -288,3 +288,7 @@ section {
   min-width: 500px;
   max-width: 500px;
 }
+
+#space_list {
+  text-align: center;
+}

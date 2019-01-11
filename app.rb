@@ -14,7 +14,7 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/' do
-    Space.create(
+    space = Space.create(
       name: params[:name],
       price: params[:price],
       description: params[:description],
@@ -63,8 +63,9 @@ class MakersBnB < Sinatra::Base
     redirect '/'
   end
 
-  get '/book' do
-    erb :booking
+  get '/space/:id' do
+    @space = Space.get(params[:id])
+    erb :space
   end
 
   private
