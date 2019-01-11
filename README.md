@@ -76,9 +76,24 @@ I would like spaces to be available until booking is confirmed
 2. Create the development database `createdb makers_bnb_development;`
 3. Create the test database `createdb makers_bnb_test;`
 4. Set up the tables `db:auto_migrate`
+5. Set up the test environment tables `db:auto_migrate RACK_ENV=test`
 
 ### Running tests
 
 1. Run rackup to start the server `rackup`
 2. Open up a browser and navigate to the following page [http://localhost:9292](http://localhost:9292)
 3. Run the tests with `rspec` in the project root folder
+4. Additional code coverage is checked by the use of [Travis CI](https://travis-ci.com)
+
+Future direction
+---------
+* Add ability to approve or reject any bookings as a host
+* Implement email notifications for any actions undertaken in the webapp
+
+Contributors
+-------------
+
+* [Connor Kam-Cheong](https://github.com/Sindex42/)
+* [Rodrigue Kayembe](https://github.com/Rodrigue-K)
+* [Tom Russell](https://github.com/tomlovesgithub)
+* [Simon Cass](https://github.com/scass91)
