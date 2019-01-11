@@ -1,6 +1,9 @@
 require "./config/data_mapper"
+require 'rspec/core/rake_task'
 
-task default: [:migration]
+RSpec::Core::RakeTask.new
+
+task :default => :spec
 
 namespace "db" do
   desc "Truncates tables"
@@ -15,5 +18,3 @@ namespace "db" do
     puts "Upgraded successfully"
   end
 end
-
-task :migration => ["db:auto_migrate"]
