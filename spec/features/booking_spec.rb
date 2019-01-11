@@ -7,5 +7,11 @@ feature 'booking' do
       first("#indv_space").click_button 'Book'
       expect(page).to have_content 'When are you buzzing in?'
     end
+
+    scenario "user can see available dates" do
+      first("#indv_space").click_button 'Book'
+      expect(page).to have_content 'Dates available'
+    end
   end
+
 end
