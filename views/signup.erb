@@ -6,11 +6,13 @@
   <title></title>
 </head>
 <center>
-
+  <nav>
+    <%= erb(:navbar)%>
+  </nav>
   <body>
     <%= erb(:title) %>
-    <%= erb(:signforms, :locals => { :action => "/signup", :name => "Sign Up" }) %>
+    <%= erb(:signforms, :locals => { :action => "/signup", :name => "Submit" }) %>
+    <%= erb(:footer)%>
   </body>
-
 </center>
 </html>

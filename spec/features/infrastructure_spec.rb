@@ -5,7 +5,7 @@ feature 'Infrastructure' do
   context 'Homepage' do
     scenario 'A user can go directly to their profile page if signed in' do
       visit '/'
-      click_link 'Profile'
+      click_button 'Profile'
       expect(current_path).to eq '/profile'
     end
   end
