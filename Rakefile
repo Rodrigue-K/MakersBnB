@@ -3,7 +3,7 @@ require 'rspec/core/rake_task'
 
 RSpec::Core::RakeTask.new
 
-task :default => :spec
+task :default => [:spec, :migration]
 
 namespace "db" do
   desc "Truncates tables"
@@ -18,3 +18,5 @@ namespace "db" do
     puts "Upgraded successfully"
   end
 end
+
+task :migration => ["db:auto_migrate"]
