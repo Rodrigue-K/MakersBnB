@@ -7,4 +7,6 @@ class Space
   property :name, Text
   property :price, Integer
   property :description, Text
+  property :available_from, Date
+  property :available_to, Date
 end

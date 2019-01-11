@@ -11,12 +11,14 @@
     <%= erb(:button, :locals => { :object => "signup", :name => "Sign Up" }) %>
     <%= erb(:button, :locals => { :object => "signin", :name => "Sign In" }) %>
     <a href="/profile">Profile</a>
-  </div>
+    <br><br>
+
     <% @spaces.reverse.each do |space| %>
-      <h2>Name:</h2><%= space.name %>
-      <h2>Description:</h2><%= space.description  %>
-      <h2>Price:</h2><%= space.price %>
-      <h2>Availability</h2>
+      <b>Name: </b><%= space.name %><br>
+      <b>Description: </b><%= space.description %><br>
+      <b>Price: </b><%= space.price %><br>
+      <b>Available from: </b><%= space.available_from %><br>
+      <b>Available to: </b><%= space.available_to %><br>
       <br><br>
     <% end %>
 </body>

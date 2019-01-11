@@ -17,9 +17,11 @@ class MakersBnB < Sinatra::Base
     Space.create(
       name: params[:name],
       price: params[:price],
-      description: params[:description]
+      description: params[:description],
+      available_from: params[:available_from],
+      available_to: params[:available_to]
     )
-
+    
     redirect '/'
   end
 
