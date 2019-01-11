@@ -1,5 +1,7 @@
 require "./config/data_mapper"
 
+task default: [:migration]
+
 namespace "db" do
   desc "Truncates tables"
   task :auto_migrate do
@@ -13,3 +15,5 @@ namespace "db" do
     puts "Upgraded successfully"
   end
 end
+
+task :migration => ["db:auto_migrate"]
