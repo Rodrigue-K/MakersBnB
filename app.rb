@@ -22,6 +22,14 @@ class MakersBnB < Sinatra::Base
       available_to: params[:available_to]
     )
 
+    dates = space.make_dates(space.available_from, space.available_to)
+    dates.each do |date|
+      Availability.create(
+        date: date,
+        space_id: space.id
+      )
+    end
+
     redirect '/'
   end
 
@@ -65,6 +73,7 @@ class MakersBnB < Sinatra::Base
 
   get '/space/:id' do
     @space = Space.get(params[:id])
+    @dates = Availability.all
     erb :space
   end
 

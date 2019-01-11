@@ -3,10 +3,7 @@ feature 'Listings' do
   background { signin }
 
   scenario 'A user can fill in details for a listing' do
-    fill_in :name, with: 'Hive'
-    fill_in :price, with: 350
-    fill_in :description, with: 'Buzzing'
-    click_button 'Submit'
+    fill_in_bee_listing
 
     expect(current_path).to eq '/'
   end

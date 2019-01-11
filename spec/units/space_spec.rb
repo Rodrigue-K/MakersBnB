@@ -22,4 +22,13 @@ describe Space do
   it 'has a description' do
     expect(space.description).to eq('Nice')
   end
+
+  describe '#make_dates' do
+    let(:date_from) { space.available_from }
+    let(:date_to) { space.available_to }
+
+    it 'makes an array' do
+      expect(space.make_dates(date_from, date_to)).to be_an(Array)
+    end
+  end
 end

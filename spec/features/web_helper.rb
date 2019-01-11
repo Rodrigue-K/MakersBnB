@@ -18,7 +18,7 @@ def fill_in_bee_listing
   fill_in :name, with: 'Hive'
   fill_in :price, with: 350
   fill_in :description, with: 'Buzzing'
-  fill_in :available_from, with:'2019-01-17'
-  fill_in :available_to, with:'2019-01-19'
+  fill_in :available_from, with: '2019-01-17'
+  fill_in :available_to, with: '2019-01-19'
   click_button 'Submit'
 end
