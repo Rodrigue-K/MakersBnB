@@ -18,6 +18,8 @@ body {
 
 #title {
   display: inline-block;
+  font-family: monospace;
+  font-size: 1.85em;
 }
 
 .bee {
@@ -26,6 +28,29 @@ body {
   border-radius: 4px;
   padding: 5px;
   width: 150px;
+}
+
+.button {
+  background-color: black;
+  color: hsla(49, 100%, 65%, 1);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  float: inherit;
+}
+
+.button:hover {
+  /* animation-name: rotate;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out; */
+  /* animation-duration: 0.5s;
+  animation-iteration-count: infinite; */
+}
+
+.button:active {
+  box-shadow: 0 0px black;
+  transform: translateY(4px);
 }
 
 .bee-right {
