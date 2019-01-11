@@ -17,7 +17,8 @@ feature 'Listings' do
     expect(page).to have_content('Price')
     expect(page).to have_content('Name')
     expect(page).to have_content('Description')
-    expect(page).to have_content('Availability')
+    expect(page).to have_content('Available from')
+    expect(page).to have_content('Available to')
   end
 
   scenario 'A user can see a submitted listing' do
@@ -26,5 +27,12 @@ feature 'Listings' do
     expect(page).to have_content 'Hive'
     expect(page).to have_content '350'
     expect(page).to have_content 'Buzzing'
+  end
+
+  scenario 'A user can see a range of available dates for a space' do
+    fill_in_bee_listing
+
+    expect(page).to have_content 'Available from: 2019-01-17'
+    expect(page).to have_content 'Available to: 2019-01-19'
   end
 end
