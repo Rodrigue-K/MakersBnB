@@ -1,5 +1,7 @@
 # MakersBnB
 
+[![Build Status](https://travis-ci.org/Sindex42/MakersBnB.svg?branch=master)](https://travis-ci.org/Sindex42/MakersBnB)
+
 ## Makers Academy - 3 day Group Project
 
 A web app that lets hosts offer up a list of spaces to rent and lets renters rent them out
