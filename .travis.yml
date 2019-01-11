@@ -9,5 +9,8 @@ before_script:
 before_install:
   - sudo apt-get install -y postgresql-server-dev-9.2
 
+script:
+  - RACK_ENV=test bundle exec rake --trace db:auto_migrate
+  
 notifications:
   email: false
