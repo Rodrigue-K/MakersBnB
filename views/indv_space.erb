@@ -4,5 +4,5 @@
   <b>Price: </b><%= space.price %><br>
   <b>Available from: </b><%= space.available_from %><br>
   <b>Available to: </b><%= space.available_to %><br>
-  <br><br>
+  <%= erb(:button, :locals => { :action => "book", :name => "book", :method => "get", :value => nil  }) %>
 </div>

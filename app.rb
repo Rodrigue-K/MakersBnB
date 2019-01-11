@@ -21,7 +21,7 @@ class MakersBnB < Sinatra::Base
       available_from: params[:available_from],
       available_to: params[:available_to]
     )
-    
+
     redirect '/'
   end
 
@@ -61,6 +61,10 @@ class MakersBnB < Sinatra::Base
   delete '/signin' do
     session.delete(:user_id)
     redirect '/'
+  end
+
+  get '/book' do
+    erb :booking
   end
 
   private
