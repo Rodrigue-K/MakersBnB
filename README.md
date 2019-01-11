@@ -6,19 +6,20 @@
 
 A web app that lets hosts offer up a list of spaces to rent and lets renters rent them out
 
+![Homepage](https://media.giphy.com/media/9Vb9bp8IkEDrFJgP7m/giphy.gif)
 
 ## User stories
 
 ```
-As a user 
+As a user
 So that I can start renting out spaces
 I would like to be able to sign up
 
-As a user 
+As a user
 So that I can continue renting spaces
-I would like to be able to sign in 
+I would like to be able to sign in
 
-As a user 
+As a user
 So that I can continue using the website
 I would like to be able to stay signed in
 
@@ -39,10 +40,10 @@ So that I can encourage uptake of my space
 I would like to provide a short description of my space
 
 As a host
-So that I can charge customers 
+So that I can charge customers
 I would like to list a price per night
 
-As a host 
+As a host
 So my space can be rented as much as possible
 I would like to be able to offer a range of dates where the space is available
 
@@ -51,14 +52,14 @@ So that I can have somewhere to sleep
 I would like to be able request to hire a space for one night
 
 As a host
-So that I can vet people 
+So that I can vet people
 I would like to be able to approve a renter's request
 
 As a renter
 So I know when a space is unavailable
 I would like to not be able to book that space
 
-As a host 
+As a host
 So that my space can be rented as long as possible
 I would like spaces to be available until booking is confirmed
 ```
@@ -81,4 +82,3 @@ I would like spaces to be available until booking is confirmed
 1. Run rackup to start the server `rackup`
 2. Open up a browser and navigate to the following page [http://localhost:9292](http://localhost:9292)
 3. Run the tests with `rspec` in the project root folder
-
